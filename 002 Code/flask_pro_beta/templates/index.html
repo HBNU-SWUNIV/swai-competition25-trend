@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>절약 추천 시스템 - 지출 내역</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>나의 지출 내역</h1>
+        <nav>
+            <a href="{{ url_for('add_expense_page') }}" class="button">새 지출 추가</a>
+            <a href="{{ url_for('analysis_page') }}" class="button">지출 분석</a>
+        </nav>
+        <div id="expense-list">
+            <p>지출 내역을 로드 중입니다...</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

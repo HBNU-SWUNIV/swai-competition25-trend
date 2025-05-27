@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지출 분석</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>지출 분석</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="button">지출 내역으로</a>
+            <a href="{{ url_for('add_expense_page') }}" class="button">새 지출 추가</a>
+        </nav>
+        <div id="analysis-results">
+            <p>지출 분석 데이터를 로드 중입니다...</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

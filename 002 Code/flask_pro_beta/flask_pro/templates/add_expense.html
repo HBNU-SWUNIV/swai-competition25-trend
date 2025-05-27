@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 지출 추가</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>새 지출 추가</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="button">지출 내역으로</a>
+            <a href="{{ url_for('analysis_page') }}" class="button">지출 분석</a>
+        </nav>
+        <form id="add-expense-form">
+            <div class="form-group">
+                <label for="expense-date">날짜:</label>
+                <input type="date" id="expense-date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="category">카테고리:</label>
+                <select id="category" name="category" required>
+                    <option value="">카테고리 선택</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="item-name">내용:</label>
+                <input type="text" id="item-name" name="itemName" placeholder="예: 아메리카노" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">금액:</label>
+                <input type="number" id="amount" name="amount" placeholder="예: 4500" required>
+            </div>
+            <div class="form-group">
+                <label for="satisfaction">만족도 (1-5):</label>
+                <input type="number" id="satisfaction" name="satisfaction" min="1" max="5" placeholder="1 (불만족) - 5 (매우 만족)" required>
+            </div>
+            <button type="submit" class="button">지출 추가</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
